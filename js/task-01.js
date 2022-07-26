@@ -1,21 +1,10 @@
-const catNumberEl = document.querySelectorAll(".item").length;
-console.log("Number of categories: ", catNumberEl);
+const categoriesNumberEl =
+  document.querySelectorAll("#categories .item").length;
+console.log("Number of categories: ", categoriesNumberEl);
 
-// const catNumberRef = document.querySelector("#categories");
-// console.log("Number of categories: ", catNumberRef.childElementCount);
+const listOfItems = document.querySelectorAll("#categories .item");
 
-// Category: Animals;
-// Elements: 4;
-
-// Category: Products;
-// Elements: 3;
-
-// Category: Technologies;
-// Elements: 5;
-
-const nameOfCategory = document.querySelector("#categories");
-console.log(nameOfCategory.childElementCount);
-
-// nameOfCategory.forEach((category) => {
-//   console.dir("Category: ", category);
-// });
+listOfItems.forEach((item) => {
+  console.log("Category: ", item.firstElementChild.textContent);
+  console.log("Elements: ", item.lastElementChild.children.length);
+});
