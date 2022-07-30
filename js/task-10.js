@@ -23,7 +23,7 @@ function createBoxes(event) {
   for (let i = 0; i < boxAmount; i += 1) {
     const box = document.createElement("div");
     box.style.width = `${30 + i * 10}px`;
-    box.style.height = `${20 + i * 10}px`;
+    box.style.height = `${30 + i * 10}px`;
     box.style.backgroundColor = getRandomHexColor();
     allCreatedBoxes.push(box);
     wrapper.append(...allCreatedBoxes);
