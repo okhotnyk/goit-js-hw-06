@@ -9,7 +9,7 @@ function onInputChange(event) {
   let value = event.currentTarget.value;
   value = value.trim();
 
-  if (!value || !value.trim()) {
+  if (!value.trim()) {
     value = "Anonymous";
   }
 
