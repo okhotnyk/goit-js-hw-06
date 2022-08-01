@@ -1,7 +1,6 @@
 const input = document.querySelector("#validation-input");
 
 input.addEventListener("blur", onBlur);
-input.addEventListener("focus", onFocus);
 
 function onBlur(event) {
   let value = event.currentTarget.value;
@@ -9,12 +8,9 @@ function onBlur(event) {
 
   if (value.length == input.dataset.length) {
     input.classList.add("valid");
+    input.classList.remove("invalid");
   } else {
     input.classList.add("invalid");
+    input.classList.remove("valid");
   }
-}
-
-function onFocus() {
-  input.onfocus = this.value = "";
-  input.classList.remove("invalid", "valid");
 }
